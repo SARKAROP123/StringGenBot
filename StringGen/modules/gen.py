@@ -40,13 +40,13 @@ async def gen_session(
     message, user_id: int, telethon: bool = False, old_pyro: bool = False
 ):
     if telethon:
-        ty = f"ᴛᴇʟᴇᴛʜᴏɴ"
+        ty = f"𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍"
     elif old_pyro:
-        ty = f"ᴩʏʀᴏɢʀᴀᴍ v1"
+        ty = f"𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 v1"
     else:
-        ty = f"ᴩʏʀᴏɢʀᴀᴍ v2"
+        ty = f"𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 v2"
 
-    await message.reply_text(f"» ᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ {ty} sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ...")
+    await message.reply_text(f"» 𝐓𝐑𝐘𝐈𝐍𝐆 𝐓𝐎 𝐒𝐓𝐀𝐑𝐓 {ty} 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐌𝐀𝐊𝐄...")
 
     try:
         api_id = await Anony.ask(
@@ -231,7 +231,7 @@ async def gen_session(
                 link_preview=False,
                 parse_mode="html",
             )
-            await client(JoinChannelRequest("@FallenAssociation"))
+            await client(JoinChannelRequest("@TKS_JOIN"))
         else:
             string_session = await client.export_session_string()
             await client.send_message(
@@ -239,7 +239,7 @@ async def gen_session(
                 txt.format(ty, string_session, SUPPORT_CHAT),
                 disable_web_page_preview=True,
             )
-            await client.join_chat("FallenAssociation")
+            await client.join_chat("TKS_JOIN")
     except KeyError:
         pass
     try:
@@ -251,7 +251,7 @@ async def gen_session(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs",
+                            text="𝐒𝐀𝐕𝐄𝐃 𝐌𝐄𝐒𝐒𝐀𝐆𝐄",
                             url=f"tg://openmessage?user_id={user_id}",
                         )
                     ]
